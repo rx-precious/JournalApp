@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "767169515736",
+    "firebase_url": "https://glass-arcanum-208512.firebaseio.com",
+    "project_id": "glass-arcanum-208512",
+    "storage_bucket": "glass-arcanum-208512.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767169515736:android:3742e1166f58f889",
+        "android_client_info": {
+          "package_name": "com.preccydev.journalapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767169515736-350jfvf2lmj76prgjbtk58dlr6fr7u16.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.preccydev.journalapp",
+            "certificate_hash": "5149def908197acc48ca0e5d76f5b9ab512701fd"
+          }
+        },
+        {
+          "client_id": "767169515736-53blek5v4ntkerl7bfdlmje7jnir00q5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEpWIANZdI-HyYWu-MEDkExM7cqYjADvg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767169515736-53blek5v4ntkerl7bfdlmje7jnir00q5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
