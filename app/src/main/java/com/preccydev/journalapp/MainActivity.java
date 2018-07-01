@@ -49,9 +49,11 @@ public class MainActivity extends BaseActivity implements GoogleApiClient.OnConn
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
+                    updateUI();
+
 
                 } else {
-
+                    signIn();
                 }
             }
         };
@@ -72,13 +74,7 @@ public class MainActivity extends BaseActivity implements GoogleApiClient.OnConn
         //Initialize Firebase Components
         mfirebaseauth = FirebaseAuth.getInstance();
 
-        login = findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signIn();
-            }
-        });
+
     }
 
     @Override
