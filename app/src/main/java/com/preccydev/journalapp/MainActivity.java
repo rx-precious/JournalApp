@@ -3,7 +3,6 @@ package com.preccydev.journalapp;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +17,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.common.api.GoogleApi;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,6 +25,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.preccydev.journalapp.model.BaseActivity;
 
 public class MainActivity extends BaseActivity implements GoogleApiClient.OnConnectionFailedListener {
     private static final int RC_SIGN_IN = 9001;
@@ -36,6 +35,7 @@ public class MainActivity extends BaseActivity implements GoogleApiClient.OnConn
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mfirebaseauth;
     private FirebaseAuth.AuthStateListener mAuthLiatener;
+    private Button next;
 
 
     @Override
@@ -117,6 +117,7 @@ public class MainActivity extends BaseActivity implements GoogleApiClient.OnConn
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
+                            Snackbar.make(findViewById(R.id.layout), "Authentication Successful.", Snackbar.LENGTH_SHORT).show();
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mfirebaseauth.getCurrentUser();
                             updateUI();
@@ -124,7 +125,7 @@ public class MainActivity extends BaseActivity implements GoogleApiClient.OnConn
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Snackbar.make(findViewById(R.id.layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
-                            updateUI();
+                            updateUINo();
                         }
 
                         // [START_EXCLUDE]
@@ -157,6 +158,11 @@ public class MainActivity extends BaseActivity implements GoogleApiClient.OnConn
     private void updateUI() {
         hideProgressDialog();
         startActivity();
+
+    }
+
+    private void updateUINo() {
+        hideProgressDialog();
 
     }
 

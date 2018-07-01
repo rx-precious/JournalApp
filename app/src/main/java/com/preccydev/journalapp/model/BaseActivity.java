@@ -1,4 +1,4 @@
-package com.preccydev.journalapp;
+package com.preccydev.journalapp.model;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+
+import com.preccydev.journalapp.R;
 
 public class BaseActivity extends AppCompatActivity {
 
